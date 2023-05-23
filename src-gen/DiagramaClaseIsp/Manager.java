@@ -15,54 +15,48 @@ public class Manager extends Persoana {
 	/**
 	 * 
 	 */
-	public void blackListClient() {
-	}
 
 	/**
 	 * 
 	 */
-	public void afisareClienti() {
+	public void afisareClienti(Client[] clienti) {
+		for(int i = 0; i < clienti.length; i++)
+		{
+			System.out.println("Clientul " + (i+1) + ":");
+			clienti[i].afisarePersoana();
+		}
 	}
 
 	/**
 	 * 
 	 */				
-	public void afisareAbonamente() {
+	public void afisareAbonamente(Abonament[] abonamente) {
+		for(int i =0; i< abonamente.length; i++)
+		{
+			System.out.println("Abonamentul " + (i+1) + ":");
+			abonamente[i].afisareAbonament();
+		}
 	}
 
 	/**
 	 * 
 	 */
-	public void afisareSali() {
+	public void afisareSali(Sala[] sali) {
+		for(int i = 0; i < sali.length; i++)
+		{
+			System.out.println("Sala " + (i+1) + ":");
+			sali[i].afisareSala();
+		}
 	}
 
 	/**
 	 * 
 	 */
-	public void afisareFacturi() {
-	}
-
-	/**
-	 * 
-	 */
-	public void modificareAbonament() {
-	}
-
-	/**
-	 * 
-	 */
-	public void adaugareSala() {
-	}
-
-	/**
-	 * 
-	 */
-	public void modificareSala() {
-	}
-
-	/**
-	 * 
-	 */
-	public void stergeSala() {
+	public void afisareFacturi(Factura[] facturi) {
+		for(int i = 0; i < facturi.length; i++)
+		{
+			System.out.println("Factura " + (i+1) + ":");
+			facturi[i].afisareFactura();
+		}
 	}
 }
