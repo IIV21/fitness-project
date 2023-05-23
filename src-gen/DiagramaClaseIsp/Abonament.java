@@ -9,6 +9,14 @@ package DiagramaClaseIsp;
  * 
  */
 public class Abonament {
+	public Abonament(int pret, String denumire, Sala sala, ClaseFitness clasefitness,
+	AntrenamentInstructor antrenamentinstructor) {
+		this.pret = pret;
+		this.denumire = denumire;
+		this.sala = sala;
+		this.clasefitness = clasefitness;
+		this.antrenamentinstructor = antrenamentinstructor;
+	}
 	/**
 	 * 
 	 */

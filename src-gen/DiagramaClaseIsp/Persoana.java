@@ -4,11 +4,22 @@
 
 package DiagramaClaseIsp;
 
+import java.io.Console;
+import java.util.concurrent.ConcurrentHashMap;
+
 /************************************************************/
 /**
  * 
  */
 public class Persoana {
+	
+	public Persoana(String dataNastere, String email, String cNP, String prenume, String nume) {
+		this.dataNastere = dataNastere;
+		this.email = email;
+		CNP = cNP;
+		this.prenume = prenume;
+		this.nume = nume;
+	}
 	/**
 	 * 
 	 */
@@ -34,11 +45,17 @@ public class Persoana {
 	 * 
 	 */
 	public void afisarePersoana() {
+		System.out.println("Nume: " + nume + " Prenume: " + prenume + " Data nastere: " + dataNastere + " Email: "
+				+ email + " CNP: " + CNP);
 	}
-
 	/**
 	 * 
 	 */
-	public void modificarePersoana() {
+	public void modificarePersoana(String dataNastere, String email, String cNP, String prenume, String nume) {
+		this.dataNastere = dataNastere;
+		this.email = email;
+		CNP = cNP;
+		this.prenume = prenume;
+		this.nume = nume;
 	}
 }

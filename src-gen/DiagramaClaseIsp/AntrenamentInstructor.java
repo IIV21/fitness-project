@@ -9,6 +9,10 @@ package DiagramaClaseIsp;
  * 
  */
 public class AntrenamentInstructor {
+	public AntrenamentInstructor(String nume, int durata) {
+		this.nume = nume;
+		this.durata = durata;
+	}
 	/**
 	 * 
 	 */
@@ -17,7 +21,6 @@ public class AntrenamentInstructor {
 	 * 
 	 */
 	public int durata;
-
 	/**
 	 * 
 	 */
