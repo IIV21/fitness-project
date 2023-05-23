@@ -9,6 +9,10 @@ package DiagramaClaseIsp;
  * 
  */
 public class Sala {
+	public Sala(String nume, String adresa) {
+		this.nume = nume;
+		this.adresa = adresa;
+	}
 	/**
 	 * 
 	 */
@@ -17,16 +21,17 @@ public class Sala {
 	 * 
 	 */
 	public String adresa;
-
 	/**
 	 * 
 	 */
 	public void afisareSala() {
+		System.out.println("Nume: " + nume + " Adresa: " + adresa);
 	}
-
 	/**
 	 * 
 	 */
-	public void modificareSala() {
+	public void modificareSala(String nume, String adresa) {
+		this.nume = nume;
+		this.adresa = adresa;
 	}
 }

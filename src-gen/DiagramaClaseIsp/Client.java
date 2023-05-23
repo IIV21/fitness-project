@@ -9,48 +9,80 @@ package DiagramaClaseIsp;
  * 
  */
 public class Client extends Persoana {
-	/**
-	 * 
-	 */
-	public Abonament[] abonament;
-	/**
-	 * 
-	 */
-	public Factura[] factura;
-
-	/**
-	 * 
-	 */
-	public void afisareAbonamente() {
+	public Client(String dataNastere, String email, String cNP, String prenume, String nume) {
+		super(dataNastere, email, cNP, prenume, nume);
 	}
 
+	/**
+	 * 
+	 */
+	public Abonament abonament;
+	/**
+	 * 
+	 */
+	public static int nrFacturi = 0;
+	public Factura factura;
+
+	/**
+	 * 
+	 */
+	public void afisareAbonament() {
+		if(abonament != null)
+		{
+			System.out.println("Denumire abonament: " + abonament.denumire + "Pret abonament: " + abonament.pret);
+			return;
+		}
+		System.out.println("Nu exista abonament!");
+	}
+
+	public void adaugareFactura(Factura factura)
+	{
+		this.factura = factura;
+		System.out.println("Factura a fost adaugata cu succes!");
+	}
 	/**
 	 * 
 	 */
 	public void plataAbonament() {
+		System.out.println("Abonamentul a fost platit cu succes!");
 	}
 
 	/**
 	 * 
 	 */
-	public void creeareAbonament() {
+	public void creeareAbonament( Abonament abonament) {
+		this.abonament = abonament;
+		System.out.println("Abonamentul a fost creat cu succes!");
 	}
 
 	/**
 	 * 
 	 */
 	public void anulareAbonament() {
+		this.factura = null;
 	}
 
 	/**
 	 * 
 	 */
 	public void afisareFactura() {
+		if(factura!= null)
+		{
+			System.out.println(factura.data);
+			System.out.println(factura.suma);
+			return;
+		}
+		System.out.println("Nu exista factura!");
 	}
 
 	/**
 	 * 
 	 */
 	public void platireFactura() {
+		if(factura == null)
+		{
+			System.out.println("Nu exista factura!");
+		}
+		System.out.println("Factura a fost platita cu succes!");
 	}
 }

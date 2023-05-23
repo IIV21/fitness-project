@@ -8,7 +8,13 @@ package DiagramaClaseIsp;
 /**
  * 
  */
-public class Factura {
+public class Factura {	
+	public Factura(int suma, String data, ModalitatePlata modalitatePlata, Client client) {
+		this.suma = suma;
+		this.data = data;
+		this.modalitatePlata = modalitatePlata;
+		this.client = client;
+	}
 	/**
 	 * 
 	 */
@@ -21,6 +27,8 @@ public class Factura {
 	 * 
 	 */
 	public ModalitatePlata modalitatePlata;
+
+
 	/**
 	 * 
 	 */
@@ -30,11 +38,15 @@ public class Factura {
 	 * 
 	 */
 	public void afisareFactura() {
+		System.out.println("Suma: " + suma + " Data: " + data + " Modalitate plata: " + modalitatePlata);
 	}
 
 	/**
 	 * 
 	 */
-	public void modificareFactura() {
+	public void modificareFactura(int suma, String data, ModalitatePlata modalitatePlata) {
+		this.suma = suma;
+		this.data = data;
+		this.modalitatePlata = modalitatePlata;
 	}
 }

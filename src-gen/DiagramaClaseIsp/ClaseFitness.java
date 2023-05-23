@@ -9,6 +9,12 @@ package DiagramaClaseIsp;
  * 
  */
 public class ClaseFitness {
+	public ClaseFitness(String denumire, int durata, String ziSaptamana, int oraIncepere) {
+		this.denumire = denumire;
+		this.durata = durata;
+		this.ziSaptamana = ziSaptamana;
+		this.oraIncepere = oraIncepere;
+	}
 	/**
 	 * 
 	 */
