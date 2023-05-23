@@ -36,11 +36,19 @@ public class ClaseFitness {
 	 * 
 	 */
 	public void afisareClasaFitness() {
+		System.out.println("Denumire: " + denumire + " Durata: " + durata + " Zi saptamana: " + ziSaptamana
+				+ " Ora incepere: " + oraIncepere);
 	}
 
 	/**
 	 * 
 	 */
-	public void modificareClasaFitness() {
+	public void modificareClasaFitness(String denumire, int durata, String ziSaptamana, int oraIncepere) {
+		this.denumire = denumire;
+		this.durata = durata;
+		this.ziSaptamana = ziSaptamana;
+		this.oraIncepere = oraIncepere;
 	}
+		
+	
 }

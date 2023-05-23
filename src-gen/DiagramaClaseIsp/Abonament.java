@@ -42,17 +42,20 @@ public class Abonament {
 	 * 
 	 */
 	public void afisareAbonament() {
+		System.out.println("Pret: " + pret + " Denumire: " + denumire);
 	}
 
 	/**
 	 * 
 	 */
-	public void modificarePret() {
+	public void modificarePret(int pret) {
+		this.pret = pret;
 	}
 
 	/**
 	 * 
 	 */
-	public void modificareDenumire() {
+	public void modificareDenumire(String denumire) {
+		this.denumire = denumire;
 	}
 }

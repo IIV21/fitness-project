@@ -20,7 +20,6 @@ public class Client extends Persoana {
 	/**
 	 * 
 	 */
-	public static int nrFacturi = 0;
 	public Factura factura;
 
 	/**
@@ -54,14 +53,6 @@ public class Client extends Persoana {
 		this.abonament = abonament;
 		System.out.println("Abonamentul a fost creat cu succes!");
 	}
-
-	/**
-	 * 
-	 */
-	public void anulareAbonament() {
-		this.factura = null;
-	}
-
 	/**
 	 * 
 	 */

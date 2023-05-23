@@ -25,11 +25,14 @@ public class AntrenamentInstructor {
 	 * 
 	 */
 	public void afisareAntrenamentInstructor() {
+		System.out.println("nume: " + nume + "durata " + durata);
 	}
 
 	/**
 	 * 
 	 */
-	public void modificareAntrenamentInstructor() {
+	public void modificareAntrenamentInstructor(String nume, int durata) {
+		this.nume = nume;
+		this.durata = durata;
 	}
 }
