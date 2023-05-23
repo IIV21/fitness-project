@@ -9,6 +9,9 @@ package DiagramaClaseIsp;
  * 
  */
 public class Manager extends Persoana {
+	public Manager(String dataNastere, String email, String cNP, String prenume, String nume) {
+		super(dataNastere, email, cNP, prenume, nume);
+	}
 	/**
 	 * 
 	 */
@@ -23,7 +26,7 @@ public class Manager extends Persoana {
 
 	/**
 	 * 
-	 */
+	 */				
 	public void afisareAbonamente() {
 	}
 
