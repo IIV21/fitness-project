@@ -9,8 +9,9 @@ package DiagramaClaseIsp;
  * 
  */
 public class Client extends Persoana {
-	public Client(String dataNastere, String email, String cNP, String prenume, String nume) {
+	public Client(String dataNastere, String email, String cNP, String prenume, String nume, int fonduri) {
 		super(dataNastere, email, cNP, prenume, nume);
+		this.fonduri = fonduri;
 	}
 
 	/**
@@ -21,6 +22,9 @@ public class Client extends Persoana {
 	 * 
 	 */
 	public Factura factura;
+	
+	public ModalitatePlata modalitatePlata;
+	public int fonduri;
 
 	/**
 	 * 
@@ -75,5 +79,50 @@ public class Client extends Persoana {
 			System.out.println("Nu exista factura!");
 		}
 		System.out.println("Factura a fost platita cu succes!");
+	}
+
+	public boolean solicitareAbonamentNou(String denumireAbonamentAles){
+		afisareAbonamente();
+		if(this.abonament == null){
+			System.out.println("Aveti deja un abonament!");
+			return false;
+		}
+		return true;
+	}
+
+	private void afisareAbonamente(){
+		for(Abonament a : MainProject.abonamente){
+			System.out.println("Denumire : " + a.denumire + "Pret: " + a.pret);
+		}
+	}
+	
+	public boolean introducereMetodaPlata(String metodaPlata) {
+		if(metodaPlata.equals("CASH")){
+			modalitatePlata = ModalitatePlata.CASH;
+			return true;
+		} else if(metodaPlata.equals("CARD")){
+			modalitatePlata = ModalitatePlata.CARD;
+			return true;
+		}
+		return false;
+	}
+	
+	public boolean adaugareAbonament(String denumireAbonament) {
+		Abonament abonament = new Abonament(0,"",null,null,null);
+		for(Abonament a : MainProject.abonamente) {
+			if(denumireAbonament.equals(a.denumire)) {
+				abonament.denumire = a.denumire;
+				abonament.pret = a.pret;
+			}
+		}
+		
+		if(abonament == null)
+			return false;
+		
+		if(abonament.pret > fonduri)
+			return false;
+		
+		this.abonament = abonament;
+		return true;
 	}
 }
